@@ -1,0 +1,69 @@
+<div class="menu-god">
+    <div class="main-menu">
+        <div class="menu">
+            <div class="menu-content">
+                <h5>Women's Fashion</h5>
+                <h5>Men's Fashion</h5>
+                <h5>Electronics</h5>
+                <h5>Home & Lifestyle</h5>
+                <h5>Medicine</h5>
+                <h5>Sports & Outdoor</h5>
+                <h5>Baby's & Toys</h5>
+                <h5>Groceries & Pets</h5>
+                <h5>Health & Beauty</h5>
+            </div>
+        </div>
+        <div class="accordion-menu">
+            <img class="accordion" src="assets/Home/accordion.png" alt="Accordion" />
+            <img class="accordion" src="assets/Home/accordion.png" alt="Accordion" />
+        </div>
+        <div class="slide-show">
+            <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let slide of dynamicSlides">
+                    <ng-template carouselSlide [id]="slide.id">
+                        <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title" />
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+    <div class="sales">
+        <div class="today">
+            <p class="today-text">Today's</p>
+        </div>
+        <div class="flash-sale">
+            <div class="sales-text">
+                <h1>Flash Sales</h1>
+            </div>
+            <div class="time">
+                <div>
+                    <p>Days</p>
+                    <h2 #days></h2>
+                </div>
+                <div>
+                    <p>Hours</p>
+                    <h2 #hours></h2>
+                </div>
+                <div>
+                    <p>Minutes</p>
+                    <h2 #minutes></h2>
+                </div>
+                <div>
+                    <p>Seconds</p>
+                    <h2 #seconds></h2>
+                </div>
+            </div>
+            <div class="arrow">
+                <img src="assets/Home/left-arrow.png" (click)="movePrev()" alt="" />
+                <img src="assets/Home/right-arrow.png" (click)="moveNext()" alt="" />
+            </div>
+        </div>
+        <div class="wrapper">
+            <ng-image-slider #nav [images]="imageObject" [infinite]="false" [autoSlide]="1"
+                [imageSize]="{ width: 250, height: 270 }" slideImage="1" [showArrow]="false"></ng-image-slider>
+        </div>
+    </div>
+    <div class="view-all">
+        <p>View All Products</p>
+    </div>
+</div>
