@@ -1,91 +1,207 @@
-<div class="menu-god">
-    <div class="main-menu">
-        <div class="menu">
-            <div class="menu-content">
-                <h5>Women's Fashion</h5>
-                <h5>Men's Fashion</h5>
-                <h5>Electronics</h5>
-                <h5>Home & Lifestyle</h5>
-                <h5>Medicine</h5>
-                <h5>Sports & Outdoor</h5>
-                <h5>Baby's & Toys</h5>
-                <h5>Groceries & Pets</h5>
-                <h5>Health & Beauty</h5>
+<div>
+    <div class="menu-god">
+        <div class="main-menu">
+            <div class="menu">
+                <div class="menu-content">
+                    <h5>Women's Fashion</h5>
+                    <h5>Men's Fashion</h5>
+                    <h5>Electronics</h5>
+                    <h5>Home & Lifestyle</h5>
+                    <h5>Medicine</h5>
+                    <h5>Sports & Outdoor</h5>
+                    <h5>Baby's & Toys</h5>
+                    <h5>Groceries & Pets</h5>
+                    <h5>Health & Beauty</h5>
+                </div>
+            </div>
+            <div class="accordion-menu">
+                <img class="accordion" src="assets/Home/accordion.png" alt="Accordion" />
+                <img class="accordion" src="assets/Home/accordion.png" alt="Accordion" />
+            </div>
+            <div class="slide-show">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let slide of dynamicSlides">
+                        <ng-template carouselSlide [id]="slide.id">
+                            <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title" />
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
             </div>
         </div>
-        <div class="accordion-menu">
-            <img class="accordion" src="assets/Home/accordion.png" alt="Accordion" />
-            <img class="accordion" src="assets/Home/accordion.png" alt="Accordion" />
+        <div>
+            <div class="common-category">
+                <div class="today">
+                    <p class="today-text">Today's</p>
+                </div>
+                <div class="flash-sale">
+                    <div class="sales-text">
+                        <h1>Flash Sales</h1>
+                    </div>
+                    <div class="time">
+                        <div>
+                            <p>Days</p>
+                            <h2 #days></h2>
+                        </div>
+                        <div>
+                            <p>Hours</p>
+                            <h2 #hours></h2>
+                        </div>
+                        <div>
+                            <p>Minutes</p>
+                            <h2 #minutes></h2>
+                        </div>
+                        <div>
+                            <p>Seconds</p>
+                            <h2 #seconds></h2>
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <img src="assets/Home/left-arrow.png" (click)="movePrev()" alt="" />
+                        <img src="assets/Home/right-arrow.png" (click)="moveNext()" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <ng-image-slider #nav [images]="imageObject" [infinite]="false" [autoSlide]="1"
+                    [imageSize]="{ width: 250, height: 270 }" slideImage="1" [showArrow]="false"></ng-image-slider>
+            </div>
         </div>
-        <div class="slide-show">
-            <owl-carousel-o [options]="customOptions">
-                <ng-container *ngFor="let slide of dynamicSlides">
-                    <ng-template carouselSlide [id]="slide.id">
-                        <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title" />
-                    </ng-template>
-                </ng-container>
-            </owl-carousel-o>
+        <div class="view-all-products">
+            <p>View All Products</p>
+        </div>
+        <div class="common-category">
+            <div class="today">
+                <p class="today-text">Categories</p>
+            </div>
+            <div class="flash-sale">
+                <div class="sales-text">
+                    <h1>Browse By Category</h1>
+                </div>
+                <div class="arrow">
+                    <img src="assets/Home/left-arrow.png" alt="" />
+                    <img src="assets/Home/right-arrow.png" alt="" />
+                </div>
+            </div>
+            <div class="category">
+                <img src="assets/Home/categories/phone.png" alt="">
+                <img src="assets/Home/categories/computer.png" alt="">
+                <img src="assets/Home/categories/smart-watch.png" alt="">
+                <img src="assets/Home/categories/headphone.png" alt="">
+                <img src="assets/Home/categories/camera.png" alt="">
+                <img src="assets/Home/categories/gaming.png" alt="">
+            </div>
+        </div>
+        <div class="common-category">
+            <div class="today">
+                <p class="today-text">This Month</p>
+            </div>
+            <div class="flash-sale">
+                <div class="sales-text">
+                    <h1>Best Selling Products</h1>
+                </div>
+                <div class="arrow">
+                    <div class="view-all">
+                        <p>View All</p>
+                    </div>
+                </div>
+            </div>
+            <div class="month">
+                <img src="assets/Home/month/shirt.png" alt="">
+                <img src="assets/Home/month/bag.png" alt="">
+                <img src="assets/Home/month/cpu-cooler.png" alt="">
+                <img src="assets/Home/month/board.png" alt="">
+            </div>
+        </div>
+        <div class="common-category">
+            <img src="assets/Home/speaker.png" alt="">
+        </div>
+        <div class="common-category">
+            <div class="today">
+                <p class="today-text">Our Products</p>
+            </div>
+            <div class="flash-sale">
+                <div class="sales-text">
+                    <h1>Explore Our Products</h1>
+                </div>
+                <div class="arrow">
+                    <img src="assets/Home/left-arrow.png" alt="" />
+                    <img src="assets/Home/right-arrow.png" alt="" />
+                </div>
+            </div>
+            <div class="month">
+                <img src="assets/Home/products/dog_food.png" alt="">
+                <img src="assets/Home/products/camera.png" alt="">
+                <img src="assets/Home/products/laptop.png" alt="">
+                <img src="assets/Home/products/cream.png" alt="">
+                <img src="assets/Home/products/car.png" alt="">
+                <img src="assets/Home/products/shoes.png" alt="">
+                <img src="assets/Home/products/joystick.png" alt="">
+                <img src="assets/Home/products/shirt.png" alt="">
+
+            </div>
+        </div>
+        <div class="view-all-products">
+            <p>View All Products</p>
+        </div>
+        <div class="common-category">
+            <div class="today">
+                <p class="today-text">Featured</p>
+            </div>
+            <div class="flash-sale">
+                <div class="sales-text">
+                    <h1>New Arrival</h1>
+                </div>
+            </div>
+            <div class="featured">
+                <img class="play-station" src="assets/Home/featured/play_station.png" alt="">
+                <div class="column">
+                    <img class="woman" src="assets/Home/featured/woman.png" alt="">
+                    <div class="row">
+                        <img class="speaker" src="assets/Home/featured/speaker.png" alt="">
+                        <img class="perfume" src="assets/Home/featured/perfume.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="service">
+            <img src="assets/Home/services/truck.png" alt="">
+            <img src="assets/Home/services/customer_care.png" alt="">
+            <img src="assets/Home/services/guard.png" alt="">
         </div>
     </div>
-    <div class="sales">
-        <div class="today">
-            <p class="today-text">Today's</p>
+    <div class="footer">
+        <div class="exclusive">
+            <h2>Exclusive</h2>
+            <h3>Subscribe</h3>
+            <p>Get 10% off your first order</p>
+            <input type="text">
         </div>
-        <div class="flash-sale">
-            <div class="sales-text">
-                <h1>Flash Sales</h1>
-            </div>
-            <div class="time">
-                <div>
-                    <p>Days</p>
-                    <h2 #days></h2>
-                </div>
-                <div>
-                    <p>Hours</p>
-                    <h2 #hours></h2>
-                </div>
-                <div>
-                    <p>Minutes</p>
-                    <h2 #minutes></h2>
-                </div>
-                <div>
-                    <p>Seconds</p>
-                    <h2 #seconds></h2>
-                </div>
-            </div>
-            <div class="arrow">
-                <img src="assets/Home/left-arrow.png" (click)="movePrev()" alt="" />
-                <img src="assets/Home/right-arrow.png" (click)="moveNext()" alt="" />
-            </div>
+        <div class="support">
+            <h2>Support</h2>
+            <p>111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.</p>
+            <p>exclusivegmail.com</p>
+            <p>+88015-88888-9999</p>
         </div>
-        <div class="wrapper">
-            <ng-image-slider #nav [images]="imageObject" [infinite]="false" [autoSlide]="1"
-                [imageSize]="{ width: 250, height: 270 }" slideImage="1" [showArrow]="false"></ng-image-slider>
+        <div class="account">
+            <h3>Account</h3>
+            <p>My Account</p>
+            <p>Login / Register</p>
+            <p>cart</p>
+            <p>Wishlist</p>
+            <p>shop</p>
         </div>
-    </div>
-    <div class="view-all">
-        <p>View All Products</p>
-    </div>
-    <div class="sales">
-        <div class="today">
-            <p class="today-text">Categories</p>
+        <div class="quick-link">
+            <h3>Quick Link</h3>
+            <p>privacy policy</p>
+            <p>Terms of Use</p>
+            <p>FAQ</p>
+            <p>Contact</p>
         </div>
-        <div class="flash-sale">
-            <div class="sales-text">
-                <h1>Browse By Category</h1>
-            </div>
-            <div class="arrow">
-                <img src="assets/Home/left-arrow.png"  alt="" />
-                <img src="assets/Home/right-arrow.png"  alt="" />
-            </div>
-        </div>
-        <div class="category">
-            <img src="assets/Home/categories/phone.png" alt="">
-            <img src="assets/Home/categories/computer.png" alt="">
-            <img src="assets/Home/categories/smart-watch.png" alt="">
-            <img src="assets/Home/categories/headphone.png" alt="">
-            <img src="assets/Home/categories/camera.png" alt="">
-            <img src="assets/Home/categories/gaming.png" alt="">
+        <div class="download">
+            <h3>Download App</h3>
+            <p>Save $3 with App New User Only</p>
+            <img src="assets/Home/footer/download.png" alt="">
+            <img src="assets/Home/footer/social.png" alt="">
         </div>
     </div>
 </div>
