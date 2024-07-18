@@ -97,7 +97,8 @@
 
 .arrow {
   display: flex;
-  flex: 1;
+  flex: 0.5;
+  justify-content: center;
 
 }
 
@@ -126,6 +127,18 @@
   text-align: center;
   margin: 0;
 
+}
+
+.category {
+  display: flex;
+  margin-bottom: 5%;
+  margin-top: 3%;
+  gap: 15px;
+}
+
+.category img {
+  width: 170px;
+  height: 145px;
 }
 
 
