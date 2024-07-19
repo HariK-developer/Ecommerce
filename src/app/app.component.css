@@ -23,6 +23,12 @@
   text-align: center;
 }
 
+.language select {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -58,7 +64,6 @@
 }
 
 .search-cart input[type="text"] {
-  padding: 5px;
   background-color: rgba(128, 128, 128, 0.084);
   border: none;
   font-size: x-small;
@@ -67,10 +72,11 @@
 
 .search {
   background-color: rgba(128, 128, 128, 0.084);
-  width: 16px;
   height: 16px;
-  padding-right: 30px;
+  width: 16px;
+  margin-right: 30px;
 }
+
 
 .fav {
   width: 18px;
