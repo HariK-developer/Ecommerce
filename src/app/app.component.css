@@ -56,6 +56,16 @@
   font-weight: 500;
 }
 
+.navBar p:hover {
+
+  color: #DB4444;;
+  text-decoration:underline;
+}
+
+.navBar a {  
+  text-decoration: none;
+}
+
 .search-cart {
   display: flex;
   flex: 1;
@@ -89,6 +99,60 @@ hr {
   border: none;
   border-top: 1px solid lightgray;
 }
+
+.footer {
+  display: flex;
+  width: 100%;
+  height: 440px;
+  background-color: black;
+  align-items: flex-start;
+}
+.exclusive-footer {
+  margin-left: 8%;
+}
+
+.exclusive-footer input {
+  outline: white solid;
+  background-color: black;
+}
+
+.exclusive-footer, .support, .account, .quick-link, .download {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: flex-start; 
+  margin-top: 5%;
+}
+
+
+.footer-p {
+  font-size: 16px;
+  color: white;
+  margin-top: 3px;
+}
+
+.footer-small-text {
+  font-size: small;
+  color: white;
+}
+
+.footer-header {
+
+  font-size: larger;
+  color: white;
+}
+
+.footer h4 {
+  font-size: medium;
+  color: white;
+  margin-top: 5px;
+}
+
+.footer-img {
+  margin-top: 12px;
+}
+
 
 @media (max-width: 800px) {
   .nav-container {

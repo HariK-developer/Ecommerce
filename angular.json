@@ -5,6 +5,12 @@
   "projects": {
     "Ecommerce": {
       "projectType": "application",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr": "src/locale/messages.fr.xlf"
+        }
+      },
       "schematics": {},
       "root": "",
       "sourceRoot": "src",

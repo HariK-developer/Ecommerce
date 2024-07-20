@@ -233,58 +233,6 @@ height: 284px;
   height: 161px;
 }
 
-.footer {
-  display: flex;
-  width: 100%;
-  height: 440px;
-  background-color: black;
-  align-items: flex-start;
-}
-.exclusive {
-  margin-left: 8%;
-}
-
-.exclusive input {
-  outline: white solid;
-  background-color: black;
-}
-
-.exclusive, .support, .account, .quick-link, .download {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: flex-start; 
-  justify-content: flex-start; 
-  margin-top: 5%;
-}
-
-
-.footer-p {
-  font-size: 16px;
-  color: white;
-  margin-top: 3px;
-}
-
-.footer-small-text {
-  font-size: small;
-  color: white;
-}
-
-.footer-header {
-
-  font-size: larger;
-  color: white;
-}
-
-.footer h4 {
-  font-size: medium;
-  color: white;
-  margin-top: 5px;
-}
-
-.footer-img {
-  margin-top: 12px;
-}
 
 
 @media (max-width: 800px) {

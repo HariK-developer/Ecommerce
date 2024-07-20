@@ -1,0 +1,39 @@
+
+.about {
+    margin-left: 14.5%
+    
+}
+
+.nav {
+    display: flex;    
+}
+
+.nav-home {
+    color: gray;
+}
+
+.nav-about {
+
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.our-story {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.our-story-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.our-story-img {
+    display: flex;
+    flex: 1;
+    width: 705px;
+    height: 609px;
+}

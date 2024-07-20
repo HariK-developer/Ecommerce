@@ -3,52 +3,49 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { CommonModule } from '@angular/common';
 import { NgImageSliderComponent, NgImageSliderModule } from 'ng-image-slider';
-
-
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,CarouselModule, NgImageSliderModule],
+  imports: [CommonModule, CarouselModule, NgImageSliderModule, TranslateModule],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements AfterViewInit {
-
   customOptions: OwlOptions;
   dynamicSlides = [
     {
       id: '1',
-      src:'assets/Home/Iphone.png',
-      alt:'Side 1',
-      title:'Side 1'
+      src: 'assets/Home/Iphone.png',
+      alt: 'Side 1',
+      title: 'Side 1',
     },
     {
       id: '2',
-      src:'assets/Home/speaker.png',
-      alt:'Side 2',
-      title:'Side 2'
+      src: 'assets/Home/speaker.png',
+      alt: 'Side 2',
+      title: 'Side 2',
     },
     {
       id: '3',
-      src:'assets/Home/Iphone.png',
-      alt:'Side 3',
-      title:'Side 3'
+      src: 'assets/Home/Iphone.png',
+      alt: 'Side 3',
+      title: 'Side 3',
     },
     {
       id: '4',
-      src:'assets/Home/speaker.png',
-      alt:'Side 4',
-      title:'Side 4'
+      src: 'assets/Home/speaker.png',
+      alt: 'Side 4',
+      title: 'Side 4',
     },
     {
       id: '5',
-      src:'assets/Home/Iphone.png',
-      alt:'Side 5',
-      title:'Side 5'
-    }
-    
-  ]
+      src: 'assets/Home/Iphone.png',
+      alt: 'Side 5',
+      title: 'Side 5',
+    },
+  ];
 
   constructor() {
     // Set the target date to 3 days from now
@@ -62,26 +59,25 @@ export class HomeComponent implements AfterViewInit {
       dots: true,
       navSpeed: 200,
       autoplay: true,
-      navText: ['',''],
+      navText: ['', ''],
       responsive: {
         0: {
-          items: 1 
+          items: 1,
         },
         400: {
-          items: 1
+          items: 1,
         },
         760: {
-          items: 1
+          items: 1,
         },
         1000: {
-          items: 1
-        }
+          items: 1,
+        },
       },
-      nav: true
+      nav: true,
     };
   }
 
-  
   date: any;
   now: any;
   targetDate: any = new Date();
@@ -93,24 +89,24 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('minutes', { static: true }) minutes?: ElementRef;
   @ViewChild('seconds', { static: true }) seconds?: ElementRef;
 
-
   ngAfterViewInit() {
     setInterval(() => {
       this.tickTock();
       this.difference = this.targetTime - this.now;
       this.difference = this.difference / (1000 * 60 * 60 * 24);
-      
+
       const gifImage = document.createElement('img');
       gifImage.src = 'https://i.gifer.com/VAyR.gif';
       gifImage.onload = () => {
         if (!isNaN(this.days!.nativeElement.innerText)) {
-          this.days!.nativeElement.innerText = this.addLeadingZero(Math.floor(this.difference!));
+          this.days!.nativeElement.innerText = this.addLeadingZero(
+            Math.floor(this.difference!)
+          );
         } else {
           this.days!.nativeElement.innerHTML = ''; // Clear previous content if any
           gifImage.style.width = '25px'; // Adjust width as needed
           gifImage.style.height = '25px'; // Adjust height as needed
           this.days!.nativeElement.appendChild(gifImage);
-        
         }
       };
     }, 1000);
@@ -119,10 +115,18 @@ export class HomeComponent implements AfterViewInit {
   tickTock() {
     this.date = new Date();
     this.now = this.date.getTime();
-    this.days!.nativeElement.innerText = this.addLeadingZero(Math.floor(this.difference!));
-    this.hours!.nativeElement.innerText = this.addLeadingZero(23 - this.date.getHours());
-    this.minutes!.nativeElement.innerText = this.addLeadingZero(59 - this.date.getMinutes());
-    this.seconds!.nativeElement.innerText = this.addLeadingZero(59 - this.date.getSeconds());
+    this.days!.nativeElement.innerText = this.addLeadingZero(
+      Math.floor(this.difference!)
+    );
+    this.hours!.nativeElement.innerText = this.addLeadingZero(
+      23 - this.date.getHours()
+    );
+    this.minutes!.nativeElement.innerText = this.addLeadingZero(
+      59 - this.date.getMinutes()
+    );
+    this.seconds!.nativeElement.innerText = this.addLeadingZero(
+      59 - this.date.getSeconds()
+    );
   }
 
   addLeadingZero(value: number): string {
@@ -177,7 +181,7 @@ export class HomeComponent implements AfterViewInit {
     {
       image: 'assets/Home/joystick.png',
       thumbImage: 'assets/Home/pc.png',
-    }
+    },
   ];
 
   @ViewChild('nav') slider?: NgImageSliderComponent;
@@ -189,5 +193,4 @@ export class HomeComponent implements AfterViewInit {
   movePrev() {
     this.slider!.prev();
   }
-  
 }
