@@ -1,11 +1,9 @@
-
 .about {
     margin-left: 14.5%
-    
 }
 
 .nav {
-    display: flex;    
+    display: flex;
 }
 
 .nav-home {
@@ -31,9 +29,99 @@
     flex-direction: column;
 }
 
+
 .our-story-img {
     display: flex;
     flex: 1;
     width: 705px;
     height: 609px;
 }
+
+.report {
+    display: flex;
+    gap: 30px;
+
+}
+
+.reports {
+
+    height: 230px;
+    width: 270px;
+    outline: dotted;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    border-radius: 4px;
+}
+
+.reports:hover {
+
+    background-color: #DB4444;
+    color: white;
+}
+
+
+.reports-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.reports-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.report-count {
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.report-category {
+    font-size: medium;
+    margin: 0;
+}
+
+.team {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 10%;
+}
+
+.people-item {
+    display: flex;
+    flex-direction: column;
+    height: 564px;
+    width: 370px;
+
+}
+
+.people {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 430px;
+    width: 370px;
+    background-color: #f5f5f5;
+}
+
+
+.people-content {
+    height: 150px;
+    width: 100%;
+}
+
+.people-title {
+    font-size: 32px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+
+

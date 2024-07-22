@@ -51,18 +51,20 @@
 }
 
 .navBar p {
-  margin: 0 15px; /* Add margin around each <p> tag */
+  margin: 0 15px;
+  /* Add margin around each <p> tag */
   color: black;
   font-weight: 500;
 }
 
 .navBar p:hover {
 
-  color: #DB4444;;
-  text-decoration:underline;
+  color: #DB4444;
+  ;
+  text-decoration: underline;
 }
 
-.navBar a {  
+.navBar a {
   text-decoration: none;
 }
 
@@ -78,6 +80,8 @@
   border: none;
   font-size: x-small;
   outline: none;
+  padding: 10px;
+  width: 120px;
 }
 
 .search {
@@ -85,6 +89,7 @@
   height: 16px;
   width: 16px;
   margin-right: 30px;
+  padding: 8px;
 }
 
 
@@ -103,10 +108,11 @@ hr {
 .footer {
   display: flex;
   width: 100%;
-  height: 440px;
+  height: 50%;
   background-color: black;
   align-items: flex-start;
 }
+
 .exclusive-footer {
   margin-left: 8%;
 }
@@ -116,12 +122,16 @@ hr {
   background-color: black;
 }
 
-.exclusive-footer, .support, .account, .quick-link, .download {
+.exclusive-footer,
+.support,
+.account,
+.quick-link,
+.download {
   display: flex;
   flex: 1;
   flex-direction: column;
-  align-items: flex-start; 
-  justify-content: flex-start; 
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-top: 5%;
 }
 
@@ -157,6 +167,29 @@ hr {
 @media (max-width: 800px) {
   .nav-container {
     flex-direction: column;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .exclusive-footer,
+  .support,
+  .account,
+  .quick-link,
+  .download {
+    width: 50%;
+  }
+
+  .download {
+    margin-bottom: 5%;
+  }
+
+
+  .exclusive-footer {
+    margin-left: 0%;
   }
 
   .navBar {
