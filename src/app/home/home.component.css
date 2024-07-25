@@ -223,6 +223,171 @@
   height: 161px;
 }
 
+.slider {
+
+  margin-left: 5%;
+}
+
+.sale {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  width: 270px;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  position: relative;
+}
+
+.items {
+  height: 152px;
+  width: 172px;
+}
+
+
+.add-to-cart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black ;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  display: none; 
+  z-index: 10; 
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.sale:hover .add-to-cart {
+  display: block;
+}
+
+.discount {
+  display: flex;
+  height: 26px;
+  width: 55px;
+  background-color: #DB4444;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+
+}
+
+
+.eye-quick {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  gap: 8px
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+  margin-top: 10px;
+  width: 250px;
+}
+
+.item-name {
+  font-size: medium;
+  margin: 0;
+
+}
+
+.rate {
+  display: flex;
+  margin: 0;
+  gap: 10px;
+
+}
+
+.offer {
+  color: #DB4444;
+}
+
+.old-price {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.rate p {
+  margin: 0;
+
+}
+
+.rating {
+  display: flex;
+  margin: 0;
+  gap: 10px;
+}
+
+.rating p {
+  margin: 0;
+}
+
+.reviews {
+  color: gray;
+}
+
+.wish-list {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, filter 0.3s ease;
+}
+
+.wish-list img {
+  height: 14px;
+  width: 16px;
+}
+
+.wish-list:hover {
+  background-color: #DB4444;
+  filter: invert(1) hue-rotate(180deg);
+}
+
+
+.view:hover {
+  background-color: #DB4444;
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.view {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, filter 0.3s ease;
+}
+
+.view img {
+  height: 14px;
+  width: 19px;
+}
+
+
 @media (max-width: 800px) {
   .accordion {
     margin-top: 13px;

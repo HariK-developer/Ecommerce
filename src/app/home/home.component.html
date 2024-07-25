@@ -56,17 +56,52 @@
                         </div>
                     </div>
                     <div class="arrow">
-                        <img src="assets/Home/left-arrow.png" (click)="movePrev()" alt="" />
-                        <img src="assets/Home/right-arrow.png" (click)="moveNext()" alt="" />
+                        <img class="nav-button-prev" src="assets/Home/left-arrow.png" (click)="owlCar.prev()" alt="" />
+                        <img class="nav-button-next" src="assets/Home/right-arrow.png" (click)="owlCar.next()" alt="" />
                     </div>
                 </div>
             </div>
-            <div class="wrapper">
-                <ng-image-slider #nav [images]="imageObject" [infinite]="false" [autoSlide]="1"
-                    [imageSize]="{ width: 250, height: 270 }" slideImage="1" [showArrow]="false">
-                    
-                </ng-image-slider>
+
+            <div class="slider">
+                <owl-carousel-o [options]="todayOptions" style="margin-right: 20px;" #owlCar>
+                    <ng-container *ngFor="let slide of today_sales">
+                        <ng-template carouselSlide [id]="slide.id">
+                            <div class="sales-item">
+                                <div class="sale">
+                                    <div class="discount">
+                                        <p>-40%</p>
+                                    </div>
+                                    <div class="eye-quick">
+                                        <div class="wish-list">
+                                            <img src="assets/Home/heart.png"  alt="" />
+                                        </div>
+                                        <div class="view">
+                                            <img src="assets/Home/eye.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title"
+                                            [height]="slide.height" [width]="slide.width" />
+                                    </div>
+                                    <div class="add-to-cart" >Add to Cart</div>
+                                </div>
+                                <div class="item-details">
+                                    <p class="item-name">HAVIT HV-G92 Gamepad</p>
+                                    <div class="rate">
+                                        <p class="offer">$120</p>
+                                        <p class="old-price">$160</p>
+                                    </div>
+                                    <div class="rating">
+                                        <ngx-stars [readonly]="true" [size]="1" [initialStars]="slide.rating" [color]="'#FFAD33'"></ngx-stars>
+                                        <p class="reviews">(88)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
             </div>
+
         </div>
         <div class="view-all-products">
             <p>View All Products</p>
@@ -165,7 +200,7 @@
                 </div>
             </div>
         </div>
-       
+
     </div>
 
 </div>
