@@ -61,11 +61,76 @@
                     </div>
                 </div>
             </div>
-            <div class="wrapper">
-                <ng-image-slider #nav [images]="imageObject" [infinite]="false" [autoSlide]="1"
-                    [imageSize]="{ width: 250, height: 270 }" slideImage="1" [showArrow]="false">
-                    
-                </ng-image-slider>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="sales-item">
+                            <div class="sale">
+                                <div class="discount">
+                                    <p>-40%</p>
+                                </div>
+                                <div class="eye-quick">
+                                    <div class="wish-list">
+                                        <img src="assets/Home/heart.png" onclick="ShowAlert()" alt="" />
+                                    </div>
+                                    <div class="view">
+                                        <img src="assets/Home/eye.png" alt="" />
+                                    </div>
+                                </div>
+                                <img src="assets/Home/joystick.png" alt="joystick" />
+                                <div class="add-to-cart" onclick="AddCart()">Add to Cart</div>
+                            </div>
+                            <div class="item-details">
+                                <p class="item-name">HAVIT HV-G92 Gamepad</p>
+                                <div class="rate">
+                                    <p class="offer">$120</p>
+                                    <p class="old-price">$160</p>
+                                </div>
+                                <div class="rating">
+                                    <p>*****</p>
+                                    <p class="reviews">(88)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sales-item">
+                            <div class="sale">
+                                <div class="discount">
+                                    <p>-40%</p>
+                                </div>
+                                <div class="eye-quick">
+                                    <div class="wish-list">
+                                        <img src="assets/Home/heart.png" onclick="ShowAlert()" alt="" />
+                                    </div>
+                                    <div class="view">
+                                        <img src="assets/Home/eye.png" alt="" />
+                                    </div>
+                                </div>
+                                <img src="assets/Home/keyboard.png" alt="joystick" />
+                                <div class="add-to-cart" onclick="AddCart()">Add to Cart</div>
+                            </div>
+                            <div class="item-details">
+                                <p class="item-name">HAVIT HV-G92 Gamepad</p>
+                                <div class="rate">
+                                    <p class="offer">$120</p>
+                                    <p class="old-price">$160</p>
+                                </div>
+                                <div class="rating">
+                                    <p>*****</p>
+                                    <p class="reviews">(88)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="assets/Home/keyboard.png" alt="Keyboard"></div>
+                    <div class="swiper-slide"><img src="assets/Home/pc.png" alt="PC"></div>
+                    <div class="swiper-slide"><img src="assets/Home/joystick.png" alt="Joystick"></div>
+                    <div class="swiper-slide"><img src="assets/Home/keyboard.png" alt="Keyboard"></div>
+                </div>
+        
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
         <div class="view-all-products">
