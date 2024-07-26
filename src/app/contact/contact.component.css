@@ -1,0 +1,49 @@
+.menu-god {
+    margin-left: 10%;
+}
+
+.nav {
+    display: flex;
+    margin-left: 5%;
+}
+
+.nav-home {
+    color: gray;
+}
+
+.nav-about {
+
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.content {
+    display: flex;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.call-write {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.call-write-content {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.queries {
+    flex: 3;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ccc;
+}
