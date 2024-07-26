@@ -2,21 +2,21 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { CommonModule } from '@angular/common';
-import { NgImageSliderModule } from 'ng-image-slider';
+import { NgImageSliderComponent, NgImageSliderModule } from 'ng-image-slider';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgxStarsModule } from 'ngx-stars';
+import Swiper from 'swiper';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, CarouselModule, NgImageSliderModule, TranslateModule,NgxStarsModule],
+  imports: [CommonModule, CarouselModule, NgImageSliderModule, TranslateModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements AfterViewInit {
  
   customOptions: OwlOptions;
-  todayOptions: OwlOptions;
   dynamicSlides = [
     {
       id: '1',
@@ -26,7 +26,7 @@ export class HomeComponent implements AfterViewInit {
     },
     {
       id: '2',
-      src: 'assets/Home/Iphone.png',
+      src: 'assets/Home/speaker.png',
       alt: 'Side 2',
       title: 'Side 2',
     },
@@ -38,7 +38,7 @@ export class HomeComponent implements AfterViewInit {
     },
     {
       id: '4',
-      src: 'assets/Home/Iphone.png',
+      src: 'assets/Home/speaker.png',
       alt: 'Side 4',
       title: 'Side 4',
     },
@@ -47,72 +47,6 @@ export class HomeComponent implements AfterViewInit {
       src: 'assets/Home/Iphone.png',
       alt: 'Side 5',
       title: 'Side 5',
-    },
-  ];
-
-  today_sales = [
-    {
-      id: '1',
-      src: 'assets/Home/joystick.png',
-      alt: 'Side 1',
-      title: 'Side 1',
-      height: "152" ,
-      width: "172",
-      rating: 4.5,
-    },
-    {
-      id: '2',
-      src: 'assets/Home/keyboard.png',
-      alt: 'Side 2',
-      title: 'Side 2',
-      height: "101" ,
-      width: "191",
-      rating: 4,
-    },
-    {
-      id: '3',
-      src: 'assets/Home/chair.png',
-      alt: 'Side 3',
-      title: 'Side 3',
-      height: "180" ,
-      width: "107",
-      rating: 3.5,
-    },
-    {
-      id: '4',
-      src: 'assets/Home/pc.png',
-      alt: 'Side 4',
-      title: 'Side 4',
-      height: "129" ,
-      width: "170",
-      rating: 4.5,
-    },
-    {
-      id: '5',
-      src: 'assets/Home/chair.png',
-      alt: 'Side 5',
-      title: 'Side 5',
-      height: "180" ,
-      width: "107",
-      rating: 3.5,
-    },
-    {
-      id: '6',
-      src: 'assets/Home/pc.png',
-      alt: 'Side 5',
-      title: 'Side 5',
-      height: "129" ,
-      width: "170",
-      rating: 4.5,
-    },
-    {
-      id: '7',
-      src: 'assets/Home/chair.png',
-      alt: 'Side 5',
-      title: 'Side 5',
-      height: "180" ,
-      width: "107",
-      rating: 5,
     },
   ];
 
@@ -143,33 +77,7 @@ export class HomeComponent implements AfterViewInit {
           items: 1,
         },
       },
-    };
-
-    this.todayOptions = {
-      loop: true,
-      mouseDrag: true,
-      touchDrag: true,
-      pullDrag: true,
-      dots: false,
-      navSpeed: 400,
-      margin: 150,
-      autoplay: false,
-      navText: ['', ''],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        400: {
-          items: 1,
-        },
-        760: {
-          items: 2,
-        },
-        1000: {
-          items: 5,
-        },
-      },
-      
+      nav: true,
     };
   }
 
@@ -264,4 +172,64 @@ export class HomeComponent implements AfterViewInit {
     return value < 10 ? `0${value}` : `${value}`;
   }
 
+  imageObject = [
+    {
+      image: 'assets/Home/joystick.png',
+      thumbImage: 'assets/Home/joystick.png',
+    },
+    {
+      image: 'assets/Home/pc.png',
+      thumbImage: 'assets/Home/pc.png',
+    },
+    {
+      image: 'assets/Home/chair.png',
+      thumbImage: 'assets/Home/chair.png',
+    },
+    {
+      image: 'assets/Home/keyboard.png',
+      thumbImage: 'assets/Home/keyboard.png',
+    },
+    {
+      image: 'assets/Home/chair.png',
+      thumbImage: 'assets/Home/joystick.png',
+    },
+    {
+      image: 'assets/Home/joystick.png',
+      thumbImage: 'assets/Home/pc.png',
+    },
+    {
+      image: 'assets/Home/joystick.png',
+      thumbImage: 'assets/Home/joystick.png',
+    },
+    {
+      image: 'assets/Home/pc.png',
+      thumbImage: 'assets/Home/pc.png',
+    },
+    {
+      image: 'assets/Home/chair.png',
+      thumbImage: 'assets/Home/chair.png',
+    },
+    {
+      image: 'assets/Home/keyboard.png',
+      thumbImage: 'assets/Home/keyboard.png',
+    },
+    {
+      image: 'assets/Home/chair.png',
+      thumbImage: 'assets/Home/joystick.png',
+    },
+    {
+      image: 'assets/Home/joystick.png',
+      thumbImage: 'assets/Home/pc.png',
+    },
+  ];
+
+  @ViewChild('nav') slider?: NgImageSliderComponent;
+
+  moveNext() {
+    this.slider!.next();
+  }
+
+  movePrev() {
+    this.slider!.prev();
+  }
 }
