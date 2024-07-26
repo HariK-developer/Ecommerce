@@ -3,8 +3,8 @@
 }
 
 .slider {
-
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -21,16 +21,16 @@
     display: flex;
     height: 40px;
     width: 20px;
-    background-color: #db4444;
+    background-color: #DB4444;
     border-radius: 2px;
     text-align: center;
 }
 
 .today-text {
-    color: #db4444;
     margin-left: 40px;
-    font-weight: bold;
+    font-weight:400;
     white-space: nowrap;
+    font-size: large;
 }
 
 .flash-sale {
@@ -43,18 +43,20 @@
 .sales-text {
     flex: 1;
     color: black;
+    font-size: large;
 }
 
 .arrow {
     display: flex;
     justify-content: flex-end;
+    padding: 12px 25px 12px 25px;
+    border-radius: 4px;
+    font-size: small;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 0.5px;
 }
 
-.arrow img {
-    width: 36px;
-    height: 36px;
-    margin-left: 10px;
-}
 
 .sale {
     display: flex;
