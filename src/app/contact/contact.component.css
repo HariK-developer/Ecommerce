@@ -29,7 +29,9 @@
     flex: 1;
     align-items: center;
     justify-content: center;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    
 }
 
 .call-write-content {
@@ -40,10 +42,71 @@
 
 .queries {
     flex: 3;
+    margin-right: 10%;
+    margin-left: 2%;
+    height: 457px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
 }
 
 hr {
     width: 100%;
     border: none;
     border-top: 1px solid #ccc;
+}
+
+.details input {
+
+    height: 50px;
+    width: 235px;
+    margin-left: 20px;
+    margin-top: 40px;
+    border-style: none;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    outline: none;
+}
+
+.details input::placeholder {
+    font-size: small;
+    color: gray;
+    padding-left: 10px;
+}
+
+.message textarea{
+    height: 207px;
+    margin-top: 5%;
+    margin-left: 20px;
+    border-style: none;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    width: 750px;
+    outline: none;
+    resize: none;
+}
+
+.message textarea::placeholder {
+    font-size: small;
+    color: gray;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.message-button {
+
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 9%;
+    margin-left: 3%;
+}
+
+.send-message {
+    display: flex;
+    height: 56px;
+    width: 215px;
+    background-color: #DB4444;
+    border-radius: 5px;
+    margin-top: 3%;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
